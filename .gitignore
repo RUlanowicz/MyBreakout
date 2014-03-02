@@ -1,4 +1,3 @@
-
 #ignore thumbnails created by windows
 Thumbs.db
 #Ignore files build by Visual Studio
@@ -51,3 +50,7 @@ build/
 *.xcworkspacedata
 *.xcuserstate
 xcschememanagement.*
+
+#More XCode
+*.pbxproj
+*.xcbkptlist
