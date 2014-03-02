@@ -15,6 +15,14 @@ public:
     // a selector callback
     void menuCloseCallback(Object* pSender);
     
+    //new main menu button listener
+    void menuNewGame(Object* pSender);
+    
+    //options button listener
+    void optionsNewScene(Object* pSender);
+    
+    void applicationDidEnterBackground();
+    
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 };

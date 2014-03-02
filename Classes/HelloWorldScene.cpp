@@ -1,4 +1,8 @@
 #include "HelloWorldScene.h"
+#include "SimpleAudioEngine.h"
+#include "CCMenuItem.h"
+#include "CCMenu.h"
+#include "Game.h"
 
 USING_NS_CC;
 
@@ -54,23 +58,36 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    auto label = LabelTTF::create("Breakout", "Arial", 56);
+    //auto label = LabelTTF::create("Breakout", "Arial", 56);
     
     // position the label on the center of the screen
-    label->setPosition(Point(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
+    //label->setPosition(Point(origin.x + visibleSize.width/2, origin.y + visibleSize.height - label->getContentSize().height));
 
     // add the label as a child to this layer
-    this->addChild(label, 1);
-
+    //this->addChild(label, 1);
+    
+    auto newGame = MenuItemFont::create("New Game", CC_CALLBACK_1(HelloWorld::menuNewGame, this));
+    auto optionsScene = MenuItemFont::create("Options", CC_CALLBACK_1(HelloWorld::optionsNewScene, this));
+    
+    newGame->setPosition(origin.x + visibleSize.width/2,visibleSize.height/2);
+    optionsScene->setPosition(origin.y + visibleSize.width/2,visibleSize.height/2-(2*newGame->getContentSize().height));
+    
+    auto mainMenu = Menu::create(newGame,optionsScene,NULL);
+    
+    mainMenu->setPosition(Point::ZERO);
+    this->addChild(mainMenu,1);
+    
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    auto sprite = Sprite::create("logo.png");
 
     // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    sprite->setPosition(Point(origin.x + visibleSize.width/2, origin.y + visibleSize.height - sprite->getContentSize().height));
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
+    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("intro.wav");
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(100);
     
     return true;
 }
@@ -83,4 +100,13 @@ void HelloWorld::menuCloseCallback(Object* pSender)
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     exit(0);
 #endif
+}
+
+void HelloWorld::menuNewGame(Object* pSender){
+    Scene* sceneGame = Game::createScene();
+    Director::getInstance()->pushScene(sceneGame);
+}
+
+void HelloWorld::optionsNewScene(Object* pSender){
+    
 }
