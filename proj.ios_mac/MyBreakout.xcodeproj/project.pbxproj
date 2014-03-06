@@ -33,6 +33,14 @@
 		3449223D18C3949100AF448A /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3449223B18C3949100AF448A /* Game.cpp */; };
 		3449223F18C399A600AF448A /* ball-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3449223E18C399A600AF448A /* ball-hd.png */; };
 		3449224018C399A600AF448A /* ball-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3449223E18C399A600AF448A /* ball-hd.png */; };
+		345341B218C9229B005E875B /* mouth.wav in Resources */ = {isa = PBXBuildFile; fileRef = 345341B118C9229B005E875B /* mouth.wav */; };
+		345341B318C9229B005E875B /* mouth.wav in Resources */ = {isa = PBXBuildFile; fileRef = 345341B118C9229B005E875B /* mouth.wav */; };
+		346796B418C7F00F00CDCD82 /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346796B218C7F00F00CDCD82 /* Options.cpp */; };
+		346796B518C7F01A00CDCD82 /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346796B218C7F00F00CDCD82 /* Options.cpp */; };
+		346796B718C7F57300CDCD82 /* scifi002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 346796B618C7F57300CDCD82 /* scifi002.mp3 */; };
+		346796B818C7F57300CDCD82 /* scifi002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 346796B618C7F57300CDCD82 /* scifi002.mp3 */; };
+		346E5D1A18C3B89500CC1DFA /* Paddle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 346E5D1918C3B89500CC1DFA /* Paddle.jpg */; };
+		346E5D1B18C3B89500CC1DFA /* Paddle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 346E5D1918C3B89500CC1DFA /* Paddle.jpg */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -269,6 +277,11 @@
 		3449223418C3948400AF448A /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Classes/Game.h; sourceTree = "<group>"; };
 		3449223B18C3949100AF448A /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../Classes/Game.cpp; sourceTree = "<group>"; };
 		3449223E18C399A600AF448A /* ball-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball-hd.png"; sourceTree = "<group>"; };
+		345341B118C9229B005E875B /* mouth.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mouth.wav; sourceTree = "<group>"; };
+		346796B218C7F00F00CDCD82 /* Options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Options.cpp; path = ../Classes/Options.cpp; sourceTree = "<group>"; };
+		346796B318C7F00F00CDCD82 /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Options.h; path = ../Classes/Options.h; sourceTree = "<group>"; };
+		346796B618C7F57300CDCD82 /* scifi002.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scifi002.mp3; sourceTree = "<group>"; };
+		346E5D1918C3B89500CC1DFA /* Paddle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Paddle.jpg; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -380,9 +393,11 @@
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
-				3449223B18C3949100AF448A /* Game.cpp */,
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
+				3449223B18C3949100AF448A /* Game.cpp */,
 				3449223418C3948400AF448A /* Game.h */,
+				346796B218C7F00F00CDCD82 /* Options.cpp */,
+				346796B318C7F00F00CDCD82 /* Options.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -502,6 +517,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				345341B118C9229B005E875B /* mouth.wav */,
+				346796B618C7F57300CDCD82 /* scifi002.mp3 */,
+				346E5D1918C3B89500CC1DFA /* Paddle.jpg */,
 				3449223E18C399A600AF448A /* ball-hd.png */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -708,6 +726,7 @@
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				3449223F18C399A600AF448A /* ball-hd.png in Resources */,
+				346E5D1A18C3B89500CC1DFA /* Paddle.jpg in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
@@ -715,6 +734,7 @@
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				345341B218C9229B005E875B /* mouth.wav in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
@@ -722,6 +742,7 @@
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				346796B718C7F57300CDCD82 /* scifi002.mp3 in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				341BD87118B947B900CF7D0E /* logo.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
@@ -734,10 +755,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346E5D1B18C3B89500CC1DFA /* Paddle.jpg in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				341BD87218B947B900CF7D0E /* logo.png in Resources */,
+				346796B818C7F57300CDCD82 /* scifi002.mp3 in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
+				345341B318C9229B005E875B /* mouth.wav in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
 				3449224018C399A600AF448A /* ball-hd.png in Resources */,
 				341BD87B18B9494B00CF7D0E /* intro.wav in Resources */,
@@ -753,6 +777,7 @@
 			files = (
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				346796B418C7F00F00CDCD82 /* Options.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				3449223C18C3949100AF448A /* Game.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -766,6 +791,7 @@
 			files = (
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
+				346796B518C7F01A00CDCD82 /* Options.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				3449223D18C3949100AF448A /* Game.cpp in Sources */,
 			);

@@ -1,8 +1,10 @@
 #include "HelloWorldScene.h"
-#include "SimpleAudioEngine.h"
 #include "CCMenuItem.h"
 #include "CCMenu.h"
 #include "Game.h"
+#include "SimpleAudioEngine.h"
+#include "Options.h"
+#include "CCUserDefault.h"
 
 USING_NS_CC;
 
@@ -31,6 +33,8 @@ bool HelloWorld::init()
         return false;
     }
     
+    cocos2d::UserDefault::getInstance()->setBoolForKey("sound", true);
+    
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
@@ -58,13 +62,13 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    //auto label = LabelTTF::create("Breakout", "Arial", 56);
+    auto label = LabelTTF::create("Ryan Ulanowicz's", "Arial", 56);
     
     // position the label on the center of the screen
-    //label->setPosition(Point(origin.x + visibleSize.width/2, origin.y + visibleSize.height - label->getContentSize().height));
+    label->setPosition(Point(origin.x + visibleSize.width/2, origin.y + visibleSize.height - label->getContentSize().height));
 
     // add the label as a child to this layer
-    //this->addChild(label, 1);
+    this->addChild(label, 1);
     
     auto newGame = MenuItemFont::create("New Game", CC_CALLBACK_1(HelloWorld::menuNewGame, this));
     auto optionsScene = MenuItemFont::create("Options", CC_CALLBACK_1(HelloWorld::optionsNewScene, this));
@@ -89,6 +93,7 @@ bool HelloWorld::init()
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("intro.wav");
     CocosDenshion::SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(100);
     
+    
     return true;
 }
 
@@ -108,5 +113,6 @@ void HelloWorld::menuNewGame(Object* pSender){
 }
 
 void HelloWorld::optionsNewScene(Object* pSender){
-    
+    Scene* sceneOptions = Options::createScene();
+    Director::getInstance()->pushScene(sceneOptions);
 }
